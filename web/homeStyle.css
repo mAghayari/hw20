@@ -1,0 +1,44 @@
+body {
+    background-image: url("pictures/color_books.jpg");
+    color: black;
+    font-family: "Calibri Light";
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-size: large;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(69, 118, 255);
+    width: 67.5%;
+}
+
+.topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgba(13, 5, 14, 0.6);
+    color: #ffffff;
+}
+
+.topnav a.active {
+    background-color: #ffdd0f;
+    color: #000000;
+}
