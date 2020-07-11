@@ -3,7 +3,6 @@ package servlets;
 import dao.BookDao;
 import model.Book;
 import service.BookFactory;
-import service.BookValidation;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,8 +15,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
 
-@WebServlet(name = "/addBook")
-public class AddBookServlet extends HttpServlet {
+@WebServlet(name = "/editBook")
+public class SubmitEditServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -25,23 +24,17 @@ public class AddBookServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
         if (Objects.nonNull(session)) {
             BookDao bookDao = new BookDao();
             BookFactory bookFactory = new BookFactory();
             Book book = bookFactory.bookFactory(request);
-            BookValidation bookValidation = new BookValidation();
+            book.setId(((Book) session.getAttribute("book")).getId());
+            bookDao.editBook(book);
 
-            if (bookValidation.isExists(book.getName(), book.getPublisher())) {
-                bookDao.updateBookCount(book);
-                writer.println("Books count updated successfully");
-
-            } else {
-                bookDao.addBook(book);
-                writer.println("Book added successfully");
-            }
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("add.jsp");
-            requestDispatcher.include(request, response);
+            writer.println("book edited successfully");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("edit.jsp");
+            requestDispatcher.forward(request, response);
         } else {
             writer.println("Please Login First");
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");

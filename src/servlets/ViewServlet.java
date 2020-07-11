@@ -2,8 +2,6 @@ package servlets;
 
 import dao.BookDao;
 import model.Book;
-import service.BookFactory;
-import service.BookValidation;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,12 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
 
-@WebServlet(name = "/addBook")
-public class AddBookServlet extends HttpServlet {
+@WebServlet(name = "ViewServlet")
+public class ViewServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -27,21 +27,24 @@ public class AddBookServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession(false);
         if (Objects.nonNull(session)) {
+            String bookId = request.getParameter("bookId");
             BookDao bookDao = new BookDao();
-            BookFactory bookFactory = new BookFactory();
-            Book book = bookFactory.bookFactory(request);
-            BookValidation bookValidation = new BookValidation();
+            Book book = bookDao.findBookById(bookId);
 
-            if (bookValidation.isExists(book.getName(), book.getPublisher())) {
-                bookDao.updateBookCount(book);
-                writer.println("Books count updated successfully");
+            if (Objects.nonNull(book)) {
+                if (Desktop.isDesktopSupported()) {
+                    try {
+                        File file = new File("E:\\IBook\\computer\\ComputerBooks\\" + book.getName() + ".pdf");
+                        Desktop.getDesktop().open(file);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else
+                writer.println("Id Not Found");
 
-            } else {
-                bookDao.addBook(book);
-                writer.println("Book added successfully");
-            }
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("add.jsp");
-            requestDispatcher.include(request, response);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("view.jsp");
+            requestDispatcher.forward(request, response);
         } else {
             writer.println("Please Login First");
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");

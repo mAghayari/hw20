@@ -19,10 +19,10 @@
     <a href="home.jsp">Home</a>
     <a href="add.jsp">Add Book</a>
     <a class="active" href="delete.jsp">Delete Book</a>
-    <a href="edit.jsp">Edit Book</a>
+    <a href="editForm.jsp">Edit Book</a>
     <a href="view.jsp">View Book</a>
     <a href="search.jsp">Search Book</a>
-    <a href="logout.jsp">Logout</a>
+    <a href="${pageContext.request.contextPath}/logout">Logout</a>
     <a href="profile.jsp"><%out.print(userName);%></a>
 </div>
 

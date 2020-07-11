@@ -64,7 +64,7 @@ public class BookDao {
     public void editBook(Book book) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate("book", book);
+        session.update("book", book);
         transaction.commit();
         session.close();
     }
