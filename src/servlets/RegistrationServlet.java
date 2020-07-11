@@ -27,7 +27,7 @@ public class RegistrationServlet extends HttpServlet {
         user.setMobileNumber(request.getParameter("mobile"));
         user.setAge(Integer.parseInt(request.getParameter("age")));
         user.setGender(request.getParameter("gender"));
-        user.setUserName(request.getParameter("userName"));
+        user.setUserName(request.getParameter("username"));
         user.setPassword(request.getParameter("password"));
 
         UserDao userDao = new UserDao();

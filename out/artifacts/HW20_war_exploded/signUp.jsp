@@ -39,7 +39,7 @@
 
         <div class="inputBox">
             <label for="n6">UserName:</label>
-            <input type="text" name="userName" placeholder="userName" id="n6">
+            <input type="text" name="username" placeholder="userName" id="n6">
         </div>
 
         <div class="inputBox">
@@ -51,6 +51,7 @@
             <input type="radio" name="gender" value="Female" id="n8">
             <label for="n8">Female</label>
         </div>
+
         <div class="radioBox">
             <input type="radio" name="gender" value="Male">
             <label for="n8">Male</label>

@@ -24,7 +24,7 @@ public class UserDao {
         List<User> users;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        users = session.createQuery("From User", User.class).getResultList();
+        users = session.createQuery("From user", User.class).getResultList();
         transaction.commit();
         session.close();
         return users;
@@ -34,12 +34,45 @@ public class UserDao {
         User user;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("From User u Where u.userName = :userName And u.password= :password", User.class);
+        Query query = session.createQuery("From user u Where u.userName = :userName And u.password= :password", User.class);
         query.setParameter("userName", userName);
         query.setParameter("password", password);
         user = (User) query.uniqueResult();
         transaction.commit();
         session.close();
         return user;
+    }
+
+    public String checkUserNameRepetition(String desiredUserName) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("Select u.userName From user u where u.userName= :userName", User.class);
+        query.setParameter("userName", desiredUserName);
+        String userName = (String) query.uniqueResult();
+        transaction.commit();
+        session.close();
+        return userName;
+    }
+
+    public String checkEmailRepetition(String desiredEmail) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("Select u.userName From user u where u.email= :desiredEmail", User.class);
+        query.setParameter("desiredEmail", desiredEmail);
+        String email = (String) query.uniqueResult();
+        transaction.commit();
+        session.close();
+        return email;
+    }
+
+    public String checkMobileRepetition(String desiredMobile) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("Select u.userName From user u where u.mobileNumber= :desiredMobile", User.class);
+        query.setParameter("desiredMobile", desiredMobile);
+        String mobile = (String) query.uniqueResult();
+        transaction.commit();
+        session.close();
+        return mobile;
     }
 }

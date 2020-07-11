@@ -21,6 +21,50 @@
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>emailFilter</filter-name>
+        <filter-class>filters.registration.EmailFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>emailFilter</filter-name>
+        <url-pattern>/registration</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>mobileFilter</filter-name>
+        <filter-class>filters.registration.MobileFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>mobileFilter</filter-name>
+        <url-pattern>/registration</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>userNameFilter</filter-name>
+        <filter-class>filters.registration.UserNameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>userNameFilter</filter-name>
+        <url-pattern>/registration</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>passwordFilter</filter-name>
+        <filter-class>filters.registration.PasswordFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>passwordFilter</filter-name>
+        <url-pattern>/registration</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>addBook</servlet-name>
+        <servlet-class>servlets.AddBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addBook</servlet-name>
+        <url-pattern>/addBook</url-pattern>
+    </servlet-mapping>
     <!--<servlet>
         <servlet-name>homepageServlet</servlet-name>
         <servlet-class>servlets.HomepageServlet</servlet-class>

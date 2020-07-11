@@ -30,7 +30,7 @@ public class AuthenticationServlet extends javax.servlet.http.HttpServlet {
         String password = request.getParameter("password");
         User user = userDao.findUser(userName, password);
 
-        if (Objects.nonNull(user)) {
+        if (!Objects.equals(user, null)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
 
