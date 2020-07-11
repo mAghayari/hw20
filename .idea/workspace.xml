@@ -7,31 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d29a843-365e-4cf4-ba9b-480cee503f0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW20.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW20.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AuthenticationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AuthenticationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/RegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/signUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/AuthenticationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/AuthenticationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/RegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AuthenticationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/homeStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/loginStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/homeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/loginStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/loginStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,12 +184,24 @@
       <workItem from="1594265322851" duration="192000" />
       <workItem from="1594309134460" duration="12715000" />
       <workItem from="1594390659317" duration="11778000" />
-      <workItem from="1594442702706" duration="9180000" />
+      <workItem from="1594442702706" duration="9484000" />
     </task>
+    <task id="LOCAL-00001" summary="add online Library files(login, register &amp; addBook parts)">
+      <created>1594454528707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594454528707</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add online Library files(login, register &amp; addBook parts)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add online Library files(login, register &amp; addBook parts)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Glassfish_Server" timestamp="1594265474279">
@@ -241,10 +232,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594205439011" />
-    <state x="406" y="10" key="CommitChangelistDialog2" timestamp="1594454453766">
+    <state x="406" y="10" key="CommitChangelistDialog2" timestamp="1594454524260">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594454453766" />
+    <state x="406" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594454524260" />
     <state x="473" y="158" key="FileChooserDialogImpl" timestamp="1594265456235">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

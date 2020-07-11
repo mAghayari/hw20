@@ -1,4 +1,5 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
 body {
     background-image: url("books.jpg");
     background-repeat: no-repeat;
@@ -76,11 +77,10 @@ body {
 .btn {
     width: 100%;
     background: none;
-    border: 4px solid rgb(255, 249, 200);
     color: white;
     padding: 5px;
     font-size: 18px;
     cursor: pointer;
     margin: 20px 0;
-    border-style: solid;
+    border: 4px solid rgb(255, 249, 200);
 }

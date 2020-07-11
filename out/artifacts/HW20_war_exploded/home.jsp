@@ -17,7 +17,7 @@
         <%request.setAttribute("username", userName);%>
         <a class="active" href="home.jsp">Home</a>
         <a href="add.jsp">Add Book</a>
-        <a href="remove.jsp">Delete Book</a>
+        <a href="delete.jsp">Delete Book</a>
         <a href="edit.jsp">Edit Book</a>
         <a href="view.jsp">View Book</a>
         <a href="search.jsp">Search Book</a>
