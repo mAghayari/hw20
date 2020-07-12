@@ -1,7 +1,9 @@
 <%@ page import="model.User" %>
 <%@ page import="model.Book" %>
+<%@ page import="java.util.Objects" %>
+<%@ page import="java.util.List" %>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>edit book</title>
@@ -11,6 +13,16 @@
     </style>
 </head>
 <body>
+<% if (Objects.nonNull(session)) {
+    if (Objects.nonNull(session.getAttribute("user"))) {
+        ServletContext servletContext = request.getServletContext();
+        List<User> users = (List<User>) servletContext.getAttribute("onlineUsers");
+        String onlineUsers = "";
+        for (User user : users) {
+            if (!onlineUsers.contains(user.getUserName()))
+                onlineUsers += " " + user.getUserName() + "|";
+        }
+%>
 <% User user;
     Book book;
     String userName;%>
@@ -29,6 +41,7 @@
     <a href="search.jsp">Search Book</a>
     <a href="${pageContext.request.contextPath}/logout">Logout</a>
     <a href="profile.jsp"><%out.print(userName);%></a>
+    <a>Online Users:<%out.print(onlineUsers);%></a>
 </div>
 
 <div class="editForm">
@@ -59,9 +72,7 @@
         <div class="inputBox">
             <label for="s">Subject:</label>
             <select class="dropdown" name="subject" id="s" required>
-                <option value="none" selected disabled hidden>
-                    Select an Option
-                </option>
+                <option value="">None</option>
                 <option value="Biography">Biography</option>
                 <option value="Computers">Computers</option>
                 <option value="Economy">Economy</option>
@@ -79,9 +90,7 @@
         <div class="inputBox">
             <label for="g">Age Group:</label>
             <select class="dropdown" name="ageGroup" id="g" required>
-                <option value="none" selected disabled hidden>
-                    Select an Option
-                </option>
+                <option value="">None</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -93,6 +102,17 @@
         </div>
     </form>
 </div>
-
+<%
+        } else {
+            out.println("Please Login First");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
+            requestDispatcher.forward(request, response);
+        }
+    } else {
+        out.println("Please Login First");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
+        requestDispatcher.forward(request, response);
+    }
+%>
 </body>
 </html>

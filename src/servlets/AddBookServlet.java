@@ -27,25 +27,29 @@ public class AddBookServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession(false);
         if (Objects.nonNull(session)) {
-            BookDao bookDao = new BookDao();
-            BookFactory bookFactory = new BookFactory();
-            Book book = bookFactory.bookFactory(request);
-            BookValidation bookValidation = new BookValidation();
+            if (Objects.nonNull(session.getAttribute("user"))) {
+                BookDao bookDao = new BookDao();
+                BookFactory bookFactory = new BookFactory();
+                Book book = bookFactory.bookFactory(request);
+                BookValidation bookValidation = new BookValidation();
 
-            if (bookValidation.isExists(book.getName(), book.getPublisher())) {
-                bookDao.updateBookCount(book);
-                writer.println("Books count updated successfully");
-
+                if (bookValidation.isExists(book.getName(), book.getPublisher())) {
+                    bookDao.updateBookCount(book);
+                    writer.println("Books count updated successfully");
+                    response.sendRedirect("add.jsp");
+                } else {
+                    bookDao.addBook(book);
+                    writer.println("Book added successfully");
+                    response.sendRedirect("add.jsp");
+                }
             } else {
-                bookDao.addBook(book);
-                writer.println("Book added successfully");
+                writer.println("Please Login First");
+                response.sendRedirect("login.jsp");
             }
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("add.jsp");
-            requestDispatcher.include(request, response);
         } else {
             writer.println("Please Login First");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
-            requestDispatcher.include(request, response);
+            response.sendRedirect("login.jsp");
         }
+        writer.close();
     }
 }

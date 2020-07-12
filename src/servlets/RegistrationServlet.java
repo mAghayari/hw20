@@ -5,6 +5,7 @@ import model.User;
 import service.UserFactory;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 @WebServlet(name = "/registration")
 public class RegistrationServlet extends HttpServlet {
@@ -23,14 +27,20 @@ public class RegistrationServlet extends HttpServlet {
         response.setContentType("text/html");
         UserFactory userFactory = new UserFactory();
         User user = userFactory.userFactory(request);
-
         UserDao userDao = new UserDao();
         userDao.addUser(user);
 
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-        requestDispatcher.forward(request, response);
+        ServletContext servletContext = getServletContext();
+        List<User> onlineUsers = (List<User>) servletContext.getAttribute("onlineUsers");
+
+        if (Objects.isNull(onlineUsers))
+            onlineUsers = new ArrayList<>();
+
+        onlineUsers.add(user);
+        servletContext.setAttribute("onlineUsers", onlineUsers);
+        response.sendRedirect("home.jsp");
     }
 }

@@ -22,6 +22,15 @@
     </servlet-mapping>
 
     <filter>
+        <filter-name>nameFilter</filter-name>
+        <filter-class>filters.registration.NameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>nameFilter</filter-name>
+        <url-pattern>/registration</url-pattern>
+    </filter-mapping>
+
+    <filter>
         <filter-name>emailFilter</filter-name>
         <filter-class>filters.registration.EmailFilter</filter-class>
     </filter>
@@ -66,6 +75,15 @@
         <url-pattern>/addBook</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>authorFilter</filter-name>
+        <filter-class>filters.addbook.AuthorFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>authorFilter</filter-name>
+        <url-pattern>/addBook</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>DeleteServlet</servlet-name>
         <servlet-class>servlets.DeleteServlet</servlet-class>
@@ -92,6 +110,15 @@
         <servlet-name>EditBookServlet</servlet-name>
         <url-pattern>/editBook</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>authorNameFilter</filter-name>
+        <filter-class>filters.editbook.AuthorNameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>authorNameFilter</filter-name>
+        <url-pattern>/editBook</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>ViewServlet</servlet-name>
@@ -129,5 +156,9 @@
         <url-pattern>/profile</url-pattern>
     </servlet-mapping>-->
 
+    <context-param>
+        <param-name>onlineUsers</param-name>
+        <param-value/>
+    </context-param>
 
 </web-app>

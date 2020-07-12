@@ -23,8 +23,9 @@ public class EmailFilter implements Filter {
                 writer.println("<p>This Email has been registered before</p>");
             else
                 chain.doFilter(req, resp);
+        } else {
+            writer.println("Invalid Email address");
         }
-        writer.println("Invalid Email address");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("signUp.jsp");
         requestDispatcher.include(req, resp);
     }

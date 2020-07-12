@@ -24,21 +24,27 @@ public class SubmitEditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
-        HttpSession session = request.getSession();
-        if (Objects.nonNull(session)) {
-            BookDao bookDao = new BookDao();
-            BookFactory bookFactory = new BookFactory();
-            Book book = bookFactory.bookFactory(request);
-            book.setId(((Book) session.getAttribute("book")).getId());
-            bookDao.editBook(book);
+        HttpSession session = request.getSession(false);
 
-            writer.println("book edited successfully");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("edit.jsp");
-            requestDispatcher.forward(request, response);
+        if (Objects.nonNull(session)) {
+            if (Objects.nonNull(session.getAttribute("user"))) {
+                BookDao bookDao = new BookDao();
+                BookFactory bookFactory = new BookFactory();
+                Book book = bookFactory.bookFactory(request);
+                book.setId(((Book) session.getAttribute("book")).getId());
+                bookDao.editBook(book);
+
+                writer.println("book edited successfully");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("editForm.jsp");
+                requestDispatcher.forward(request, response);
+            } else {
+                writer.println("Please Login First");
+                response.sendRedirect("login.jsp");
+            }
         } else {
             writer.println("Please Login First");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
-            requestDispatcher.include(request, response);
+            response.sendRedirect("login.jsp");
         }
+        writer.close();
     }
 }

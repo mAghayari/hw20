@@ -26,21 +26,26 @@ public class DeleteServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession(false);
         if (Objects.nonNull(session)) {
-            String bookId = request.getParameter("bookId");
-            BookDao bookDao = new BookDao();
-            Book book = bookDao.findBookById(bookId);
-            if (Objects.nonNull(book)) {
-                bookDao.deleteBook(bookId);
-                writer.println("Book Deleted Successfully");
-            } else
-                writer.println("Id Not Found");
+            if (Objects.nonNull(session.getAttribute("user"))) {
+                String bookId = request.getParameter("bookId");
+                BookDao bookDao = new BookDao();
+                Book book = bookDao.findBookById(bookId);
+                if (Objects.nonNull(book)) {
+                    bookDao.deleteBook(bookId);
+                    writer.println("Book Deleted Successfully");
+                } else
+                    writer.println("Id Not Found");
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("delete.jsp");
-            requestDispatcher.include(request, response);
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("delete.jsp");
+                requestDispatcher.forward(request, response);
+            } else {
+                writer.println("Please Login First");
+                response.sendRedirect("login.jsp");
+            }
         } else {
             writer.println("Please Login First");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
-            requestDispatcher.include(request, response);
+            response.sendRedirect("login.jsp");
         }
+        writer.close();
     }
 }

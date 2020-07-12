@@ -34,7 +34,7 @@ public class UserDao {
         User user;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("From user u Where u.userName = :userName And u.password= :password", User.class);
+        Query query = session.createQuery("From user u Where u.userName = :userName And u.password= :password");
         query.setParameter("userName", userName);
         query.setParameter("password", password);
         user = (User) query.uniqueResult();
@@ -46,7 +46,7 @@ public class UserDao {
     public String checkUserNameRepetition(String desiredUserName) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("Select u.userName From user u where u.userName= :userName", User.class);
+        Query query = session.createQuery("Select u.userName From user u where u.userName= :userName");
         query.setParameter("userName", desiredUserName);
         String userName = (String) query.uniqueResult();
         transaction.commit();
@@ -57,7 +57,7 @@ public class UserDao {
     public String checkEmailRepetition(String desiredEmail) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("Select u.userName From user u where u.email= :desiredEmail", User.class);
+        Query query = session.createQuery("Select u.email From user u where u.email= :desiredEmail");
         query.setParameter("desiredEmail", desiredEmail);
         String email = (String) query.uniqueResult();
         transaction.commit();
@@ -68,7 +68,7 @@ public class UserDao {
     public String checkMobileRepetition(String desiredMobile) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("Select u.userName From user u where u.mobileNumber= :desiredMobile", User.class);
+        Query query = session.createQuery("Select u.mobileNumber From user u where u.mobileNumber= :desiredMobile");
         query.setParameter("desiredMobile", desiredMobile);
         String mobile = (String) query.uniqueResult();
         transaction.commit();

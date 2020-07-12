@@ -1,6 +1,5 @@
 body {
-    background-image: url("pictures/color_books.jpg");
-    background-repeat: no-repeat;
+    background: url("pictures/color_books.jpg") no-repeat;
     background-size: cover;
     font-family: "Calibri Light";
     color: black;
@@ -17,7 +16,8 @@ a {
 .topnav {
     overflow: hidden;
     background-color: rgb(69, 118, 255);
-    width: 67.5%;
+    width: 100%;
+    margin-right: 0;
 }
 
 .topnav a {
@@ -37,12 +37,4 @@ a {
 .topnav a.active {
     background-color: #ffdd0f;
     color: #000000;
-}
-
-p{
-    color: black;
-    font-family: "Calibri Light";
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20%;
 }

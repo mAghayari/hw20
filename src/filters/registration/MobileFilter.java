@@ -20,8 +20,8 @@ public class MobileFilter implements Filter {
                 writer.println("<p>This mobile number has been registered before</p>");
             else
                 chain.doFilter(req, resp);
-        }
-        writer.println("Invalid mobile number");
+        } else
+            writer.println("Invalid mobile number");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("signUp.jsp");
         requestDispatcher.include(req, resp);
     }

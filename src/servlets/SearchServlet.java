@@ -24,23 +24,29 @@ public class SearchServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession(false);
+
         if (Objects.nonNull(session)) {
-            String bookId = request.getParameter("bookId");
-            BookDao bookDao = new BookDao();
-            Book book = bookDao.findBookById(bookId);
-            request.setAttribute("book", book);
-            if (Objects.nonNull(book)) {
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("bookInfo.jsp");
-                requestDispatcher.forward(request, response);
+            if (Objects.nonNull(session.getAttribute("user"))) {
+                String bookId = request.getParameter("bookId");
+                BookDao bookDao = new BookDao();
+                Book book = bookDao.findBookById(bookId);
+                request.setAttribute("book", book);
+                if (Objects.nonNull(book)) {
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("bookInfo.jsp");
+                    requestDispatcher.forward(request, response);
+                } else {
+                    writer.println("Id Not Found");
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("search.jsp");
+                    requestDispatcher.forward(request, response);
+                }
             } else {
-                writer.println("Id Not Found");
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("search.jsp");
-                requestDispatcher.forward(request, response);
+                writer.println("Please Login First");
+                response.sendRedirect("login.jsp");
             }
         } else {
             writer.println("Please Login First");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
-            requestDispatcher.include(request, response);
+            response.sendRedirect("login.jsp");
         }
+        writer.close();
     }
 }

@@ -23,24 +23,30 @@ public class EditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(false);
+
         if (Objects.nonNull(session)) {
-            String bookId = request.getParameter("bookId");
-            BookDao bookDao = new BookDao();
-            Book book = bookDao.findBookById(bookId);
-            if (Objects.nonNull(book)) {
-                session.setAttribute("book", book);
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("editPage.jsp");
-                requestDispatcher.forward(request, response);
+            if (Objects.nonNull(session.getAttribute("user"))) {
+                String bookId = request.getParameter("bookId");
+                BookDao bookDao = new BookDao();
+                Book book = bookDao.findBookById(bookId);
+                if (Objects.nonNull(book)) {
+                    session.setAttribute("book", book);
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("editPage.jsp");
+                    requestDispatcher.forward(request, response);
+                } else {
+                    writer.println("Id Not Found");
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("editForm.jsp");
+                    requestDispatcher.forward(request, response);
+                }
             } else {
-                writer.println("Id Not Found");
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("edit.jsp");
-                requestDispatcher.include(request, response);
+                writer.println("Please Login First");
+                response.sendRedirect("login.jsp");
             }
         } else {
             writer.println("Please Login First");
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
-            requestDispatcher.include(request, response);
+            response.sendRedirect("login.jsp");
         }
+        writer.close();
     }
 }

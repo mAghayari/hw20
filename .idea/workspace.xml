@@ -6,36 +6,86 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d29a843-365e-4cf4-ba9b-480cee503f0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="5d29a843-365e-4cf4-ba9b-480cee503f0e" name="Default Changelist" comment="adding delete, search, view and logout parts to online Library">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Codebanoo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Codebanoo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/BookDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/filters/registration/EmailFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/filters/registration/EmailFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/filters/registration/MobileFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/filters/registration/MobileFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/service/UserValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/service/UserValidation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/RegistrationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AuthenticationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/AuthenticationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/EditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/EditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/SearchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/SubmitEditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/SubmitEditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/ViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/classes/servlets/ViewServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/bookInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/bookInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/deleteStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editFormStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/editPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/1748.jpg_wh860.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/appleOnBooks.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/book.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/book_home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/clockOnBooks.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/glassOnBook.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/pictures/home_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/dao/BookDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/homeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/indexStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/loginStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/loginStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/searchStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/signUpStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/signUpStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HW20_war_exploded/viewStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW20/filters/registration/EmailFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/filters/registration/EmailFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/filters/registration/MobileFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/filters/registration/MobileFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/service/UserValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/service/UserValidation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/AddBookServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/AddBookServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/RegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/AuthenticationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/AuthenticationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/EditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/EditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/SearchServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/SearchServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/SubmitEditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/SubmitEditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW20/servlets/ViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW20/servlets/ViewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filters/registration/EmailFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/registration/EmailFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filters/registration/MobileFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/registration/MobileFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/UserValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/UserValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AddBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/AuthenticationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/EditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/EditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/LogoutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/SearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SearchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/SubmitEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SubmitEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/ViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ViewServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/addStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bookInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/bookInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/deleteStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/editForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/editForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/editFormStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/editPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/editPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/editPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/editPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/homeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/indexStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/loginStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/searchStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/signUpStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/signUpStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/viewStyle.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +236,11 @@
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -212,7 +267,8 @@
       <workItem from="1594265322851" duration="192000" />
       <workItem from="1594309134460" duration="12715000" />
       <workItem from="1594390659317" duration="11778000" />
-      <workItem from="1594442702706" duration="35191000" />
+      <workItem from="1594442702706" duration="35864000" />
+      <workItem from="1594532116340" duration="31972000" />
     </task>
     <task id="LOCAL-00001" summary="add online Library files(login, register &amp; addBook parts)">
       <created>1594454528707</created>
@@ -229,7 +285,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add online Library files(login, register &amp; addBook parts)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add online Library files(login, register &amp; addBook parts)" />
+    <MESSAGE value="adding delete, search, view and logout parts to online Library" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding delete, search, view and logout parts to online Library" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Glassfish_Server" timestamp="1594265474279">
@@ -244,6 +301,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="75" key="#Template_Data_Languages/0.0.1536.824@0.0.1536.824" timestamp="1594135237785" />
+    <state x="499" y="171" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594532176788">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="171" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594532176788" />
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594015800896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -260,82 +321,82 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="183" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1594396608941" />
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594205439011">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594547060602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594205439011" />
-    <state x="406" y="10" key="CommitChangelistDialog2" timestamp="1594454524260">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594547060602" />
+    <state x="406" y="10" key="CommitChangelistDialog2" timestamp="1594497509471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594454524260" />
+    <state x="406" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594497509471" />
     <state x="473" y="158" key="FileChooserDialogImpl" timestamp="1594265456235">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594265456235" />
-    <state width="1200" height="194" key="GridCell.Tab.0.bottom" timestamp="1594497265291">
+    <state width="1200" height="228" key="GridCell.Tab.0.bottom" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594497265291" />
-    <state width="1200" height="194" key="GridCell.Tab.0.center" timestamp="1594497265291">
+    <state width="1200" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.0.center" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594497265291" />
-    <state width="1200" height="194" key="GridCell.Tab.0.left" timestamp="1594497265291">
+    <state width="1200" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.0.left" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594497265291" />
-    <state width="1200" height="194" key="GridCell.Tab.0.right" timestamp="1594497265291">
+    <state width="1200" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.0.right" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594497265291" />
-    <state width="1200" height="194" key="GridCell.Tab.1.bottom" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.1.bottom" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.1.center" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.1.center" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.1.left" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.1.left" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.1.right" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.1.right" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.2.bottom" timestamp="1594497265164">
+    <state width="1200" height="228" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.2.bottom" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594497265164" />
-    <state width="1200" height="194" key="GridCell.Tab.2.center" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.2.center" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.2.left" timestamp="1594497265163">
+    <state width="1200" height="228" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.2.left" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1594497265163" />
-    <state width="1200" height="194" key="GridCell.Tab.2.right" timestamp="1594497265164">
+    <state width="1200" height="228" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="228" key="GridCell.Tab.2.right" timestamp="1594570700820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="194" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1594497265164" />
-    <state width="1200" height="287" key="GridCell.Tab.3.bottom" timestamp="1594489210802">
+    <state width="1200" height="228" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1594570700820" />
+    <state width="1200" height="302" key="GridCell.Tab.3.bottom" timestamp="1594567885406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594489210802" />
-    <state width="1200" height="287" key="GridCell.Tab.3.center" timestamp="1594489210802">
+    <state width="1200" height="302" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594567885406" />
+    <state width="1200" height="302" key="GridCell.Tab.3.center" timestamp="1594567885406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1594489210802" />
-    <state width="1200" height="287" key="GridCell.Tab.3.left" timestamp="1594489210801">
+    <state width="1200" height="302" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1594567885406" />
+    <state width="1200" height="302" key="GridCell.Tab.3.left" timestamp="1594567885406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1594489210801" />
-    <state width="1200" height="287" key="GridCell.Tab.3.right" timestamp="1594489210802">
+    <state width="1200" height="302" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1594567885406" />
+    <state width="1200" height="302" key="GridCell.Tab.3.right" timestamp="1594567885406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1200" height="287" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1594489210802" />
+    <state width="1200" height="302" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1594567885406" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1594211941221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -382,24 +443,34 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/EditServlet.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/ViewServlet.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>11</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/ViewServlet.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>10</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/ViewServlet.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>16</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/UserValidation.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,8 +1,5 @@
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-
 body {
-    background-image: url("books.jpg");
-    background-repeat: no-repeat;
+    background: url("books.jpg") no-repeat;
     background-size: cover;
     font-size: 20px;
     margin: 0;
@@ -36,20 +33,6 @@ body {
     padding: 8px 0;
     margin: 8px 0;
     border-bottom: 1px solid yellow;
-}
-
-.userNameBox i {
-    width: 26px;
-    float: left;
-    text-align: center;
-    color: yellow;
-}
-
-.passwordBox i {
-    width: 26px;
-    float: left;
-    text-align: center;
-    color: yellow;
 }
 
 .userNameBox input {
