@@ -34,14 +34,14 @@
     <a class="active" href="editForm.jsp">Edit Book</a>
     <a href="view.jsp">View Book</a>
     <a href="search.jsp">Search Book</a>
-    <a href="${pageContext.request.contextPath}/logout">Logout</a>
+    <a href="logout">Logout</a>
     <a href="profile.jsp"><%out.print(userName);%></a>
     <a>Online Users:<%out.print(onlineUsers);%></a>
 
 </div>
 
 <div class="idForm">
-    <form action="${pageContext.request.contextPath}/edit" method="post">
+    <form action="edit" method="post">
         <h2>Edit A Book</h2>
 
         <div class="inputBox">

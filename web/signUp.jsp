@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="signUpForm">
-    <form action="${pageContext.request.contextPath}/registration" method="post">
+    <form action="registration" method="post">
         <h2>Sign up:</h2>
 
         <div class="inputBox">

@@ -4,7 +4,6 @@ import dao.UserDao;
 import model.User;
 import service.UserFactory;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

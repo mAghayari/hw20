@@ -22,11 +22,9 @@ public class MobileFilter implements Filter {
                 chain.doFilter(req, resp);
         } else
             writer.println("Invalid mobile number");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("signUp.jsp");
-        requestDispatcher.include(req, resp);
     }
 
-    public void init(FilterConfig config) throws ServletException {
+    public void init(FilterConfig config) {
 
     }
 

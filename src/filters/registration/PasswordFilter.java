@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebFilter(filterName = "/registration")
+@WebFilter(filterName = "PasswordFilter")
 public class PasswordFilter implements Filter {
     public void destroy() {
     }
@@ -30,8 +30,6 @@ public class PasswordFilter implements Filter {
             writer.println("<p>password is too long</p>");
         else
             writer.println("<p>Invalid characters used in password</p>");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("signUp.jsp");
-        requestDispatcher.include(req, resp);
     }
 
     public void init(FilterConfig config) {

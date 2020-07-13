@@ -39,7 +39,7 @@
 </div>
 
 <div class="addForm">
-    <form action="${pageContext.request.contextPath}/addBook" method="post">
+    <form action="addBook" method="post">
         <h2>Add A Book</h2>
 
         <div class="inputBox">

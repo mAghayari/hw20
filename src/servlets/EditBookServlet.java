@@ -2,7 +2,6 @@ package servlets;
 
 import dao.BookDao;
 import model.Book;
-import model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,8 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Objects;
 
-@WebServlet(name = "/deleteBook")
-public class DeleteServlet extends HttpServlet {
+@WebServlet(name = "/edit")
+public class EditBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -25,19 +24,21 @@ public class DeleteServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession(false);
+
         if (Objects.nonNull(session)) {
             if (Objects.nonNull(session.getAttribute("user"))) {
                 String bookId = request.getParameter("bookId");
                 BookDao bookDao = new BookDao();
                 Book book = bookDao.findBookById(bookId);
                 if (Objects.nonNull(book)) {
-                    bookDao.deleteBook(bookId);
-                    writer.println("Book Deleted Successfully");
-                } else
+                    session.setAttribute("book", book);
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("editPage.jsp");
+                    requestDispatcher.forward(request, response);
+                } else {
                     writer.println("Id Not Found");
-
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("delete.jsp");
-                requestDispatcher.forward(request, response);
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("editForm.jsp");
+                    requestDispatcher.forward(request, response);
+                }
             } else {
                 writer.println("Please Login First");
                 response.sendRedirect("login.jsp");

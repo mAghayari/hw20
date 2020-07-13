@@ -1,7 +1,7 @@
 <%@ page import="model.User" %>
 <%@ page import="java.util.Objects" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Search A Book</title>
@@ -34,13 +34,13 @@
     <a href="editForm.jsp">Edit Book</a>
     <a href="view.jsp">View Book</a>
     <a class="active" href="search.jsp">Search Book</a>
-    <a href="${pageContext.request.contextPath}/logout">Logout</a>
+    <a href="logout">Logout</a>
     <a href="profile.jsp"><%out.print(userName);%></a>
     <a>Online Users:<%out.print(onlineUsers);%></a>
 </div>
 
 <div class="idForm">
-    <form action="${pageContext.request.contextPath}/searchBook" method="post">
+    <form action="searchBook" method="post">
         <h2>Search A Book</h2>
 
         <div class="inputBox">
